@@ -9,12 +9,12 @@ public class Initial : Migration
     public override void Up()
     {
         Create.Schema(DemographicsDb.Schema);
-        Create.Schema(BuildingDb.Schema);
+        Create.Schema(FlatDb.Schema);
     }
 
     public override void Down()
     {
         Delete.Schema(DemographicsDb.Schema);
-        Delete.Schema(DemographicsDb.Schema);
+        Delete.Schema(FlatDb.Schema);
     }
 }

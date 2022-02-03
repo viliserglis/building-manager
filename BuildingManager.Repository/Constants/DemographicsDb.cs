@@ -8,4 +8,6 @@ public static class DemographicsDb
     {
         public const string Person = "person";
     }
+
+    //public static string WithSchema(this string table) => $"{Schema}.{table}";
 }
