@@ -1,10 +1,11 @@
-﻿using BuildingManager.Repository.Constants;
+﻿using BuildingManager.Models;
+using BuildingManager.Repository.Constants;
 using BuildingManager.Repository.Infrastructure;
 using Dapper;
 using SqlKata;
 using SqlKata.Compilers;
 
-namespace BuildingManager.Repository.Repositories.FlatPerson;
+namespace BuildingManager.Repository.Repositories.FlatPersonRepo;
 
 public class FlatPersonRepository : IFlatPersonRepository
 {
@@ -14,6 +15,11 @@ public class FlatPersonRepository : IFlatPersonRepository
     {
         _connectionFactory = connectionFactory;
     }
+
+    private readonly string[] _columns = new[]
+    {
+        $"{DemographicsDb.Tables.Person}.id AS "
+    };
 
     public async Task Create(Models.FlatPerson model)
     {
@@ -29,5 +35,15 @@ public class FlatPersonRepository : IFlatPersonRepository
         var sql = new PostgresCompiler().Compile(query).Sql;
         using var connection = _connectionFactory.GetConnection();
         await connection.ExecuteAsync(sql);
+    }
+
+    public Task<FlatPerson> GetFlatPersons(Guid flatId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<FlatPerson> GetPersonFlats(Guid personId)
+    {
+        throw new NotImplementedException();
     }
 }

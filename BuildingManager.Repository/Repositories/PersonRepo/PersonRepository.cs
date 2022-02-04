@@ -1,7 +1,8 @@
 ﻿using BuildingManager.Repository.Infrastructure;
+using BuildingManager.Repository.Repositories.Person;
 using Dapper;
 
-namespace BuildingManager.Repository.Repositories.Person;
+namespace BuildingManager.Repository.Repositories.PersonRepo;
 
 public class PersonRepository : IPersonRepository
 {

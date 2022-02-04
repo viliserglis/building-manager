@@ -18,8 +18,8 @@ public class FlatAndPersonFlat : Migration
 
         Create.Table(FlatDb.BuildingTables.PersonFlat)
             .InSchema(FlatDb.Schema)
-            .WithColumn("flat_id").AsGuid().NotNullable().ForeignKey(FlatDb.BuildingTables.Flat.WithSchema(), "id")
-            .WithColumn("person_id").AsGuid().NotNullable().ForeignKey(DemographicsDb.Tables.Person.WithSchema(), "id")
+            .WithColumn("flat_id").AsGuid().NotNullable().ForeignKey("flat_person", FlatDb.Schema, FlatDb.BuildingTables.Flat, "id")
+            .WithColumn("person_id").AsGuid().NotNullable().ForeignKey("person_flat", DemographicsDb.Schema, DemographicsDb.Tables.Person, "id")
             .WithColumn("is_owner").AsBoolean().NotNullable();
     }
 
