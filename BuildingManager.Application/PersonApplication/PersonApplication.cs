@@ -1,5 +1,4 @@
-﻿using BuildingManager.Repository.Repositories.Person;
-using BuildingManager.Repository.Repositories.PersonRepo;
+﻿using BuildingManager.Repository.Repositories.PersonRepo;
 
 namespace BuildingManager.Application.PersonApplication;
 

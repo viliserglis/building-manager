@@ -1,5 +1,4 @@
 ﻿using BuildingManager.Repository.Infrastructure;
-using BuildingManager.Repository.Repositories.Person;
 using Dapper;
 
 namespace BuildingManager.Repository.Repositories.PersonRepo;

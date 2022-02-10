@@ -1,0 +1,15 @@
+﻿@model LoginModel;
+
+@{
+        ViewBag.Title = "Pieteikties";
+    Layout = "_Layout";
+}
+
+<h2>Pieteikties</h2>
+<form asp-controller="Account" asp-action="Login" method="post">
+    <label asp-for="UserName"></label>
+    <input asp-for="UserName"/>
+    <label asp-for="Password"></label>
+    <input asp-for="Password"/>
+    <button class="btn btn-primary" type="submit">ieiet</button>
+</form>
