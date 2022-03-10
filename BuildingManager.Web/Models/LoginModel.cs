@@ -11,4 +11,6 @@ public class LoginModel
     [Required(ErrorMessage = "Parole nav norādīta")]
     [Display(Name = "Parole")]
     public string Password { get; set; }
+
+    public string ReturnUrl { get; set; }
 }

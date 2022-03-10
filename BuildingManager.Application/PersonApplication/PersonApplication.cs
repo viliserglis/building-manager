@@ -2,7 +2,7 @@
 
 namespace BuildingManager.Application.PersonApplication;
 
-public class PersonApplication
+public class PersonApplication : IPersonApplication
 {
     private readonly IPersonRepository _repository;
 
