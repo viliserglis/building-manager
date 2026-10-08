@@ -1,9 +1,8 @@
-﻿using BuildingManager.Repository.Repositories.Person;
-using BuildingManager.Repository.Repositories.PersonRepo;
+﻿using BuildingManager.Repository.Repositories.PersonRepo;
 
 namespace BuildingManager.Application.PersonApplication;
 
-public class PersonApplication
+public class PersonApplication : IPersonApplication
 {
     private readonly IPersonRepository _repository;
 

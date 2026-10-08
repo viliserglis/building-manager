@@ -1,6 +1,6 @@
 ﻿using BuildingManager.Repository.Constants;
 
-namespace BuildingManager.Repository.Repositories.Person;
+namespace BuildingManager.Repository.Repositories.PersonRepo;
 
 public static class PersonQueries
 {
@@ -17,8 +17,8 @@ public static class PersonQueries
         return $"SELECT " +
                $"id AS @Id, " +
                $"firstname AS @Firstname, " +
-               $"lastname AS @Lastname " +
-               $"code AS @PersonCode " +
+               $"lastname AS @Lastname, " +
+               $"code AS @PersonCode, " +
                $"created_at AS @CreatedAt " +
                $"FROM {DemographicsDb.Schema}.{DemographicsDb.Tables.Person}";
     }
